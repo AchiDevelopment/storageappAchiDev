@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.storage-container {
+    background: linear-gradient(to left, rgb(13, 13, 13), rgb(32, 32, 32));
+    min-height: 100vh;
+    width: 100%;
+}
+
+.storage-heading {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    color: darkorange
+}
+
+.storage {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 2px 5px 5px rgb(159, 159, 159);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.storage img {
+    width: 200px;
+}
+
+.storage-basics h5 {
+    color: darkorange;
+    font-size: 14px;
+}
+
+.storage-deletebtn-price {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(81, 70, 41);
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+.storage-deletebtn-price button {
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: darkgoldenrod;
+    border: none;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.storage p {
+    color: white;
+}
+
+.empty-storage-container {
+    background: linear-gradient(to left, rgb(13, 13, 13), rgb(32, 32, 32));
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.empty-storage-heading {
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    margin-bottom: 3rem;
+    text-shadow: 1px 2px 5px white;
+    transition: all 0.3s linear;
+}
+
+.empty-storage-heading:hover {
+    color: black;
+}
+
+.empty-storage-btn {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    background: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px white;
+    transition: all 0.3s linear;
+}
+
+.empty-storage-btn:hover {
+    color: darkgoldenrod;
+    background: white;
+    box-shadow: 1px 2px 5px darkgoldenrod;
+}
+

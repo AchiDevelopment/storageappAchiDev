@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    height: 100px;
+    background: linear-gradient(to left, rgb(82, 82, 82), rgb(173, 173, 173));
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-logo-container {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: darkgoldenrod;
+    text-shadow: 2px 5px 5px black;
+    transition: all 0.3s linear;
+}
+
+.navbar-logo-container:hover {
+    transform: scaleX(1.03) scaleY(1.03);
+}
+
+.navbar-btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-btn-container button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    background: darkgoldenrod;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.navbar-btn-container button:hover {
+    transform: scaleX(1.03) scaleY(1.03);
+}
+
+.storage-btn {
+    position: relative;
+}
+
+.navbar-btn-container p {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    color: white;
+    background: darkgoldenrod;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}

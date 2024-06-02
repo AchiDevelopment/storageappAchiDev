@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-container {
+    background: linear-gradient(to left, rgb(13, 13, 13), rgb(32, 32, 32));
+    min-height: 100vh;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.search-container input {
+    height: 40px;
+    width: 350px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 5px 5px rgb(128, 128, 128);
+}
+
+.search-container button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 5px 5px rgb(128, 128, 128);
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.products-cover {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 5rem;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px rgb(126, 126, 126);
+    position: relative;
+}
+
+.products-container img {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: 200px;
+    width: 270px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.products-container h5 {
+    display: flex;
+    justify-content: space-between;
+    color: darkorange;
+    font-size: 14px;
+    margin-top: 10px;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.products-price-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.products-price-btn h4 {
+    color: rgb(81, 70, 41);
+    margin-left: 3px;
+}
+
+.products-price-btn button {
+    background: rgb(81, 70, 41);
+    padding: 5px;
+    margin-right: 3px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.show-desc {
+    visibility: visible;
+    background: linear-gradient(to top, black, rgb(108, 108, 108));
+    color: white;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 250px;
+    left: 3rem;
+    bottom: 4.5rem;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: -4px -5px 5px rgb(203, 203, 203);
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    animation: showdesc 1.2s linear forwards;
+}
+
+@keyframes showdesc {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.close-desc-btn {
+    cursor: pointer;
+    height: 0;
+    border: none;
+    font-size: 30px;
+    color: darkgoldenrod;
+}
+
+.hide-desc {
+    visibility: hidden;
+    position: absolute;
+}
