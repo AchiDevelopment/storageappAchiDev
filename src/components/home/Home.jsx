@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./home.css";
 import { IoMdCloseCircle } from "react-icons/io";
 import { GlobalContext } from "../context/context";
@@ -13,7 +13,6 @@ const Home = () => {
     products,
     handleAddItemToStorage,
   } = useContext(GlobalContext);
-
   const searchValue = useRef("");
 
   const handleSearch = (e) => {
@@ -37,17 +36,17 @@ const Home = () => {
       </div>
       <div className="products-cover">
         {filteredProducts.map((productItem) => {
-          const { id, title, price, description, images } = productItem;
+          const { id, title, price, description, image } = productItem;
           return (
             <section key={id} className="products-container">
-              <img src={images} alt="images" />
+              <img src={image} alt="images" />
               <h5>
                 {title} <span onMouseOver={() => openDesc(id)}>Desc...</span>
               </h5>
               <div className="products-price-btn">
                 <h4>Price: {price}</h4>
                 <button onClick={() => handleAddItemToStorage(productItem)}>
-                  Add To Storage
+                  Add to Storage
                 </button>
               </div>
               <div

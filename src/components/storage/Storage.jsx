@@ -20,17 +20,17 @@ const Storage = () => {
     <div className="storage-container">
       <div className="storage-heading">
         <h2>Number Of Products {amount}</h2>
-        <h2>Total Price {totalPrice}</h2>
+        <h2>Total Price ${totalPrice.toFixed(2)}</h2>
       </div>
       {storage.map((storageItem) => {
-        const { id, title, price, description, images } = storageItem;
+        const { id, title, price, description, image } = storageItem;
         return (
           <section key={id} className="storage">
             <div className="storage-basics">
-              <img src={images} alt="images" />
+              <img src={image} alt="images" />
               <h5>{title}</h5>
               <div className="storage-deletebtn-price">
-                <h4>Price: {price}</h4>
+                <h4>Price: ${price}</h4>
                 <button onClick={() => handleDelete(id)}>Delete</button>
               </div>
             </div>

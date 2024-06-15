@@ -3,7 +3,7 @@ import reducer from "./reducer";
 
 export const GlobalContext = createContext();
 
-let url = "https://api.escuelajs.co/api/v1/products";
+let url = "https://fakestoreapi.com/products";
 
 const initialState = {
   storage: [],
@@ -37,8 +37,7 @@ export default function GlobalState({ children }) {
     try {
       const response = await fetch(url);
       const data = await response.json();
-      const slicedData = data.slice(10, 30);
-      setProducts(slicedData);
+      setProducts(data);
     } catch (error) {
       console.log(error);
     }
@@ -47,8 +46,6 @@ export default function GlobalState({ children }) {
   useEffect(() => {
     fetchData();
   }, [name]);
-
-  console.log(name);
 
   return (
     <GlobalContext.Provider
